@@ -29,7 +29,7 @@ const Rows = ({ title, fetchUrl, originals }) => {
       <h2 className="text-2xl mx-7 font-bold my-4">{title}</h2>
       <div className="relative group">
         <BiChevronLeft
-          className=" absolute z-10 left-0 top-0 h-full text-red-500 hidden group-hover:block cursor-pointer"
+          className=" absolute z-10 left-0 top-0 h-full text-red-500 hidden md:group-hover:block cursor-pointer"
           size={40}
           onClick={slideRight}
         />
@@ -40,7 +40,7 @@ const Rows = ({ title, fetchUrl, originals }) => {
           home={!originals ? true : ""}
         />
         <BiChevronRight
-          className="absolute z-10 right-0 top-0 h-full text-red-500 hidden group-hover:block cursor-pointer"
+          className="absolute z-10 right-0 top-0 h-full text-red-500 hidden md:group-hover:block cursor-pointer"
           size={40}
           onClick={slideLeft}
         />

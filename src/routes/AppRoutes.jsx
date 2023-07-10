@@ -16,6 +16,7 @@ const AppRoutes = () => {
     <Routes>
       <Route
         path="/"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute2>
@@ -26,6 +27,7 @@ const AppRoutes = () => {
       />
       <Route
         path="/home"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute>
@@ -36,6 +38,7 @@ const AppRoutes = () => {
       />
       <Route
         path="/login"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute2>
@@ -46,6 +49,7 @@ const AppRoutes = () => {
       />
       <Route
         path="/signUp"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute2>
@@ -56,6 +60,7 @@ const AppRoutes = () => {
       />
       <Route
         path="/my_list"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute>
@@ -66,6 +71,7 @@ const AppRoutes = () => {
       />
       <Route
         path="/search"
+        exact
         element={
           <Suspense fallback={<Loading />}>
             <ProtectedRoute>

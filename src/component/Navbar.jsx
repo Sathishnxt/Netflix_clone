@@ -50,12 +50,18 @@ const Navbar = () => {
       </div>
       <div className="sm:hidden flex items-center relative group">
         <IoReorderThreeSharp className="w-7 h-7" />
-        <div className="options w-20 hidden group-hover:flex flex-col absolute bg-customBackground hover:flex rounded z-10 gap-2 p-3 top-10 right-0">
+        <div className="options hidden group-hover:flex flex-col absolute bg-customBackground hover:flex rounded z-10 gap-2 p-3 top-10 right-0">
           {navList.map((item) => (
             <Link to={item.link} key={item.id}>
               {item.title}
             </Link>
           ))}
+          <button
+            onClick={handleLogOut}
+            className="bg-redButton w-20 h-10 rounded font-medium"
+          >
+            Log Out
+          </button>
         </div>
       </div>
     </nav>

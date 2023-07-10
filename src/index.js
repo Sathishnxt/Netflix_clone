@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
 import Context from "./context/Context";
 import AuthContextProvider from "./context/AuthContextProvider";
@@ -12,9 +12,9 @@ root.render(
   <React.StrictMode>
     <Context>
       <AuthContextProvider>
-        <BrowserRouter>
+        <HashRouter>
           <AppRoutes />
-        </BrowserRouter>
+        </HashRouter>
       </AuthContextProvider>
     </Context>
   </React.StrictMode>
