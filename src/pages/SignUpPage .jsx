@@ -31,13 +31,15 @@ const SignUpPage = () => {
         </div>
         <div className="signUp-wrapper w-full h-full grid place-content-center">
           <form
-            className="signUp-container bg-black bg-opacity-70 flex flex-col gap-6 w-[300px] md:w-[460px] h-[600px] items-center p-16"
+            className="signUp-container bg-black bg-opacity-70 flex flex-col gap-6 w-[300px] md:w-[460px] items-center p-16"
             onSubmit={handleSubmit}
           >
             <h2 className="md:w-[314px] h-[42px] text-3xl font-semibold">
               Sign Up
             </h2>
-            {error ? <p className="p-3 text-red-500">{error}</p> : null}
+            {error && (
+              <p className="p-3 text-red-500 w-[280px] md:w-[314px]">{error}</p>
+            )}
             <InputField
               type={"email"}
               value={email}

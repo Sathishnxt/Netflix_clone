@@ -31,15 +31,15 @@ const LoginPage = () => {
         </div>
         <div className="login-wrapper w-full h-full grid place-content-center">
           <form
-            className="login-container bg-black bg-opacity-70 flex flex-col gap-6 w-[300px] md:w-[460px] h-full md:h-[700px] items-center p-16"
+            className="login-container bg-black bg-opacity-70 flex flex-col gap-6 w-[300px] md:w-[460px] items-center p-16"
             onSubmit={handleSubmit}
           >
             <h2 className="md:w-[314px] h-[42px] text-3xl font-semibold">
               Sign In
             </h2>
-            {error ? (
+            {error && (
               <p className="p-3 text-red-500 w-[280px] md:w-[314px]">{error}</p>
-            ) : null}
+            )}
             <InputField
               type={"email"}
               setFun={setEmail}
