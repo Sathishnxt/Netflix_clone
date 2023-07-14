@@ -52,7 +52,7 @@ const Navbar = () => {
       <div
         className="sm:hidden flex items-center relative group"
         onClick={() => setShow(!show)}
-       >
+      >
         <IoReorderThreeSharp className="w-7 h-7" />
         {show && (
           <div className="options flex flex-col absolute bg-customBackground rounded z-10 gap-2 p-3 top-10 right-0">

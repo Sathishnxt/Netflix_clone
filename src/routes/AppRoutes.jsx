@@ -4,14 +4,21 @@ import Loading from "../component/Loading";
 import ProtectedRoute, {
   ProtectedRouteForUnAuthorizedPage,
 } from "./ProtectedRoute";
+import LandingPage from "../pages/LandingPage";
+import HomePage from "../pages/HomePage";
+import LoginPage from "../pages/LoginPage";
+import SignUpPage from "../pages/SignUpPage ";
+import MyListPage from "../pages/MyListPage";
+import SearchPage from "../pages/SearchPage";
+import PageNotFounded from "../pages/PageNotFounded";
 
-const HomePage = lazy(() => import("../pages/HomePage"));
-const LoginPage = lazy(() => import("../pages/LoginPage"));
-const SignUpPage = lazy(() => import("../pages/SignUpPage "));
-const LandingPage = lazy(() => import("../pages/LandingPage"));
-const MyListPage = lazy(() => import("../pages/MyListPage"));
-const SearchPage = lazy(() => import("../pages/SearchPage"));
-const PageNotFounded = lazy(() => import("../pages/PageNotFounded"));
+// const HomePage = lazy(() => import("../pages/HomePage"));
+// const LoginPage = lazy(() => import("../pages/LoginPage"));
+// const SignUpPage = lazy(() => import("../pages/SignUpPage "));
+// const LandingPage = lazy(() => import("../pages/LandingPage"));
+// const MyListPage = lazy(() => import("../pages/MyListPage"));
+// const SearchPage = lazy(() => import("../pages/SearchPage"));
+// const PageNotFounded = lazy(() => import("../pages/PageNotFounded"));
 
 const AppRoutes = () => {
   return (
