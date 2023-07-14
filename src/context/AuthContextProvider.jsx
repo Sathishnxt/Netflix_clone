@@ -11,7 +11,7 @@ import { doc, setDoc } from "firebase/firestore";
 const AuthContext = createContext(null);
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -27,9 +27,10 @@ const AuthContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) =>
-      setUser(currentUser)
-    );
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      localStorage.setItem("user", JSON.stringify(currentUser));
+      setUser(JSON.parse(localStorage.getItem("user")));
+    });
     return () => unsubscribe();
   }, []);
 

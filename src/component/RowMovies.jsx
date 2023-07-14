@@ -52,7 +52,7 @@ const RowMovies = ({ originals, movies, home, id }) => {
               ? "w-44 h-64"
               : home
               ? "w-[286px] h-[161px]"
-              : "h-[140px] md:h-[161px]"
+              : "h-[161px]"
           } flex-shrink-0 relative bg-customBackground overflow-hidden rounded-md transition-transform duration-300 hover:scale-105 `}
           key={movie?.id}
         >

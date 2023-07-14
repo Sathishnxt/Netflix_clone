@@ -1,7 +1,9 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loading from "../component/Loading";
-import ProtectedRoute, { ProtectedRoute2 } from "./ProtectedRoute";
+import ProtectedRoute, {
+  ProtectedRouteForUnAuthorizedPage,
+} from "./ProtectedRoute";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 const LoginPage = lazy(() => import("../pages/LoginPage"));
@@ -19,9 +21,9 @@ const AppRoutes = () => {
         exact
         element={
           <Suspense fallback={<Loading />}>
-            <ProtectedRoute2>
+            <ProtectedRouteForUnAuthorizedPage>
               <LandingPage />
-            </ProtectedRoute2>
+            </ProtectedRouteForUnAuthorizedPage>
           </Suspense>
         }
       />
@@ -41,9 +43,9 @@ const AppRoutes = () => {
         exact
         element={
           <Suspense fallback={<Loading />}>
-            <ProtectedRoute2>
+            <ProtectedRouteForUnAuthorizedPage>
               <LoginPage />
-            </ProtectedRoute2>
+            </ProtectedRouteForUnAuthorizedPage>
           </Suspense>
         }
       />
@@ -52,9 +54,9 @@ const AppRoutes = () => {
         exact
         element={
           <Suspense fallback={<Loading />}>
-            <ProtectedRoute2>
+            <ProtectedRouteForUnAuthorizedPage>
               <SignUpPage />
-            </ProtectedRoute2>
+            </ProtectedRouteForUnAuthorizedPage>
           </Suspense>
         }
       />

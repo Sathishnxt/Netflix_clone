@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../source/Netflix_Logo.png";
 import { useNetflixContext } from "../context/Context";
 import { IoReorderThreeSharp } from "react-icons/io5";
@@ -10,6 +10,7 @@ const Navbar = () => {
   const { navList } = useNetflixContext();
   const { logOut } = useAuthContext();
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
 
   const handleLogOut = async () => {
     try {
@@ -48,21 +49,26 @@ const Navbar = () => {
           Log Out
         </button>
       </div>
-      <div className="sm:hidden flex items-center relative group">
+      <div
+        className="sm:hidden flex items-center relative group"
+        onClick={() => setShow(!show)}
+       >
         <IoReorderThreeSharp className="w-7 h-7" />
-        <div className="options hidden group-hover:flex flex-col absolute bg-customBackground hover:flex rounded z-10 gap-2 p-3 top-10 right-0">
-          {navList.map((item) => (
-            <Link to={item.link} key={item.id}>
-              {item.title}
-            </Link>
-          ))}
-          <button
-            onClick={handleLogOut}
-            className="bg-redButton w-20 h-10 rounded font-medium"
-          >
-            Log Out
-          </button>
-        </div>
+        {show && (
+          <div className="options flex flex-col absolute bg-customBackground rounded z-10 gap-2 p-3 top-10 right-0">
+            {navList.map((item) => (
+              <Link to={item.link} key={item.id}>
+                {item.title}
+              </Link>
+            ))}
+            <button
+              onClick={handleLogOut}
+              className="bg-redButton w-20 h-10 rounded font-medium"
+            >
+              Log Out
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -38,7 +38,7 @@ const LoginPage = () => {
               Sign In
             </h2>
             {error ? (
-              <p className="p-3 text-red-500 w-[300px] md:w-[460px]">{error}</p>
+              <p className="p-3 text-red-500 w-[280px] md:w-[314px]">{error}</p>
             ) : null}
             <InputField
               type={"email"}
