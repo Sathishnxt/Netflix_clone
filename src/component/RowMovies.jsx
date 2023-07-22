@@ -42,17 +42,13 @@ const RowMovies = ({ originals, movies, home, id }) => {
       className={
         home || originals
           ? "overflow-x-auto mx-7 flex gap-2 p-2 scroll-smooth"
-          : "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
+          : "flex flex-wrap justify-evenly gap-2"
       }
     >
       {movies?.map((movie) => (
         <div
           className={`${
-            originals
-              ? "w-44 h-64"
-              : home
-              ? "w-[286px] h-[161px]"
-              : "h-[161px]"
+            originals ? "w-44 h-64" : "w-[286px] h-[161px]"
           } flex-shrink-0 relative bg-customBackground overflow-hidden rounded-md transition-transform duration-300 hover:scale-105 `}
           key={movie?.id}
         >

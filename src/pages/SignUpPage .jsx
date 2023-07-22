@@ -49,7 +49,7 @@ const SignUpPage = () => {
             <InputField
               type={"password"}
               setFun={SetPassword}
-              placeholder={"Add a Password"}
+              placeholder={"Add a password"}
             />
             <button
               type="submit"
