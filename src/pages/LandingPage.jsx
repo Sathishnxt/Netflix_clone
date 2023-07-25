@@ -131,9 +131,9 @@ const LandingPage = () => {
           <GetStarted />
         </div>
       </div>
-      <div className="footer bg-black lg:h-[430px] p-2 lg:py-[60px] lg:px-[160px] gap-2 text-[rgba(255,255,255,0.7)]">
+      <footer className="bg-black lg:h-[430px] p-2 lg:py-[60px] lg:px-[160px] gap-2 text-[rgba(255,255,255,0.7)]">
         <Footer />
-      </div>
+      </footer>
       <h2 className="text-center pb-2 text-lg">
         For Educational Purposes Only
       </h2>
