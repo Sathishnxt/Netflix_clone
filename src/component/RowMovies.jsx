@@ -48,16 +48,18 @@ const RowMovies = ({ originals, movies, home, id }) => {
       {movies?.map((movie) => (
         <div
           className={`${
-            originals ? "w-44 h-64" : home && "w-[286px] h-[161px]"
+            originals
+              ? "w-44 h-64"
+              : home
+              ? "w-[286px] h-[161px]"
+              : "min-h-[161px]"
           } flex-shrink-0 relative bg-customBackground overflow-hidden rounded-md transition-transform duration-300 hover:scale-105 `}
           key={movie?.id}
         >
           <img
             className="w-full h-full object-cover"
             src={`${baseUrl}${
-              originals
-                ? movie?.poster_path
-                : movie?.backdrop_path || movie?.poster_path
+              originals ? movie?.poster_path : movie?.backdrop_path
             }`}
             alt={movie?.title || movie?.name}
             loading="lazy"
