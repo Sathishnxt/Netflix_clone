@@ -18,7 +18,7 @@ const LandingPageContent = ({
       </div>
       <div className="inPage-image w-full flex flex-col  justify-center relative">
         <img src={img} alt="TV" className="z-10" />
-        {video && (
+        {/* {video && (
           <video
             src={video}
             className={`${
@@ -30,7 +30,7 @@ const LandingPageContent = ({
             loop
             muted
           ></video>
-        )}
+        )} */}
       </div>
     </div>
   );
