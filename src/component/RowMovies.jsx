@@ -16,7 +16,7 @@ const RowMovies = ({ originals, movies, home, id }) => {
     onSnapshot(docRef, (doc) => {
       setFav(doc.data()?.favMovies);
     });
-  }, [user?.email]);
+  }, []);
 
   const addFavMovies = async (movie) => {
     await updateDoc(docRef, {
