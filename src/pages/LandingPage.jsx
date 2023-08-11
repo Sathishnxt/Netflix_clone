@@ -1,17 +1,17 @@
 import React from "react";
 import logo from "../source/Netflix_Logo.png";
 import { MdLanguage } from "react-icons/md";
-import GetStarted from "../component/GetStarted";
-import LandingPageContent from "../component/LandingPageContent";
+import GetStarted from "../components/GetStarted";
+import LandingPageContent from "../components/LandingPageContent";
 import tv1 from "../source/tv.png";
 import tv2 from "../source/tvImg2.png";
 import strangeThings from "../source/strangeThings.jpg";
 import children from "../source/children.png";
 import video1 from "../source/tvVideo1.m4v";
 import video2 from "../source/tvVideo2.m4v";
-import FrequentlyAskedQuestion from "../component/FrequentlyAskedQuestion";
+import FrequentlyAskedQuestion from "../components/FrequentlyAskedQuestion";
 import { useNavigate } from "react-router-dom";
-import Footer from "../component/Footer";
+import Footer from "../components/Footer";
 
 const LandingPage = () => {
   const navigate = useNavigate();

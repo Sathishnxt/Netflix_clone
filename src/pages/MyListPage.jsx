@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../component/Navbar";
-import RowMovies from "../component/RowMovies";
+import Navbar from "../components/Navbar";
+import RowMovies from "../components/RowMovies";
 import { useNetflixContext } from "../context/Context";
 
 const MyListPage = () => {

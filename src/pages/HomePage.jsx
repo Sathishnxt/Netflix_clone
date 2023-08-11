@@ -1,7 +1,7 @@
 import React from "react";
 import requests from "../requests";
-import BillBoard from "../component/Billboards";
-import Rows from "../component/Rows";
+import BillBoard from "../components/Billboards";
+import Rows from "../components/Rows";
 
 const HomePage = () => {
   return (

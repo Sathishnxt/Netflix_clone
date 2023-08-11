@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import Loading from "../component/Loading";
+import Loading from "../components/Loading";
 import ProtectedRoute, {
   ProtectedRouteForUnAuthorizedPage,
 } from "./ProtectedRoute";

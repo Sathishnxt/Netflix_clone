@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
-import RowMovies from "../component/RowMovies";
-import Navbar from "../component/Navbar";
+import RowMovies from "../components/RowMovies";
+import Navbar from "../components/Navbar";
 import { useDebounce } from "@uidotdev/usehooks";
 import instance from "../axios";
 

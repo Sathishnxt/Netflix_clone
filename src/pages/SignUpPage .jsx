@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import logo from "../source/Netflix_Logo.png";
-import Footer from "../component/Footer";
+import Footer from "../components/Footer";
 import { useAuthContext } from "../context/AuthContextProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { useNetflixContext } from "../context/Context";
-import InputField from "../component/InputField";
+import InputField from "../components/InputField";
 
 const SignUpPage = () => {
   const { email, setEmail, password, SetPassword } = useNetflixContext();
